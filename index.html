@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Unix Time Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Unix Time Converter</h1>
+
+    <div class="container">
+
+      <fieldset>
+        <legend>Current Time</legend>
+
+        <p>
+          <label for="current-unix-time">Current Unix Time</label>
+          <input id="current-unix-time" type="text">
+        </p>
+
+        </p>
+          <label for="current-utc-time">Current UTC Time</label>
+          <input id="current-utc-time" disabled="disabled" type="text">
+        </p>
+
+        </p>
+          <label for="current-local-time">Current Local Time</label>
+          <input id="current-local-time" disabled="disabled" type="text">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Convert Unix Time to Date &amp; Time</legend>
+        <form>
+          <p>
+            <label for="user-unix-time">Enter Unix Timestamp</label>
+            <input id="user-unix-time" type="text">
+            <input id="submit-user-unix-time" type="submit" value="Convert">
+          </p>
+
+          <p>
+            <label for="user-utc-time">Calculated UTC Time</label>
+            <input id="user-utc-time" type="text" disabled="disabled">
+          </p>
+
+          <p>
+            <label for="user-local-time">Calculated Local Time</label>
+            <input id="user-local-time" type="text" disabled="disabled">
+          </p>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend>Convert Date &amp; Time to Unix Time</legend>
+        <form>
+          </p>
+            <label for="string-time">Enter Time</label>
+            <input id="string-time" type="text">
+            <input id="submit-string-time" type="submit" value="Convert">
+            <br>
+            <small>
+              (e.g. <code>2018-01-01 13:00 EDT</code>, <code>Jan 1, 2018 1:00 PM</code>)<br>
+              Defaults to local time if timezone is excluded.
+            </small>
+          </p>
+
+          </p>
+            <label for="string-unix-time">Unix Time Stamp</label>
+            <input id="string-unix-time" type="text" disabled="disabled">
+          </p>
+        </form>
+      </fieldset>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
