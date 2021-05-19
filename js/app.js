@@ -50,4 +50,12 @@
 		},
 		false
 	);
+
+	const timestamp = new URLSearchParams(
+		document.location.search.substring(1)
+	).get('time');
+	if (timestamp) {
+		document.getElementById('user-unix-time').value = timestamp;
+		document.getElementById('submit-user-unix-time').click();
+	}
 })();
