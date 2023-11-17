@@ -30,7 +30,8 @@
 	document.getElementById('submit-user-unix-time').addEventListener(
 		'click',
 		function(e) {
-			var dateObj = new Date(document.getElementById('user-unix-time').value * 1000);
+			var userInputTimestamp = document.getElementById('user-unix-time').value;
+			var dateObj = new Date( userInputTimestamp * 1000);
 			document.getElementById('user-utc-time').value   = dateObj.toUTCString();
 			document.getElementById('user-local-time').value = dateObj.toLocaleString();
 			e.preventDefault();
